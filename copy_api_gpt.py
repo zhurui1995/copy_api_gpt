@@ -63,7 +63,7 @@ class MyOpenaiClient:
         if len(messages):
             prompt = ""
             for message in messages:
-                prompt += "role:" + message["role"] + "\n" + "content:" + message["content"] + "\n" + "\n"
+                prompt += "角色:" + message["role"] + "\n" + "内容:" + message["content"] + "\n" + "\n"
             res_ = self._openai_call(prompt=prompt)
             response = Response()
             response.choices[0].message.content = res_
